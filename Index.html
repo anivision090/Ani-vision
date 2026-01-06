@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani Vision - Modern Anime Video Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Menu Icon -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Logo -->
+            <h1 class="logo">
+                <span class="logo-text">Ani Vision</span>
+                <span class="logo-badge">Premium</span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- Side Menu -->
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <h2><i class="fas fa-play-circle"></i> Ani Vision</h2>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="menu-items">
+            <li class="menu-item active" data-category="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </li>
+            <li class="menu-item" data-category="all">
+                <i class="fas fa-th-large"></i>
+                <span>All Edits</span>
+            </li>
+            <li class="menu-item" data-category="basic">
+                <i class="fas fa-star"></i>
+                <span>Basic Edits</span>
+            </li>
+            <li class="menu-item" data-category="standard">
+                <i class="fas fa-gem"></i>
+                <span>Standard Edits</span>
+            </li>
+            <li class="menu-item" data-category="high-quality">
+                <i class="fas fa-crown"></i>
+                <span>High Quality Edits</span>
+            </li>
+            <li class="menu-item" data-category="best">
+                <i class="fas fa-fire"></i>
+                <span>Best of Ani Vision</span>
+            </li>
+            <li class="menu-item" data-category="history">
+                <i class="fas fa-history"></i>
+                <span>History</span>
+            </li>
+        </ul>
+        
+        <!-- Footer Links -->
+        <div class="menu-footer">
+            <a href="privacy.html" class="footer-link">
+                <i class="fas fa-shield-alt"></i> Privacy Policy
+            </a>
+            <a href="terms.html" class="footer-link">
+                <i class="fas fa-file-contract"></i> Terms & Conditions
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Ad Space 1 (Top) -->
+        <div class="ad-space ad-top" id="adTop">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad"></i>
+                <span>Advertisement Space</span>
+            </div>
+        </div>
+
+        <!-- Home Section -->
+        <section class="home-section" id="homeSection">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Discover Premium Anime Edits</h2>
+                    <p class="hero-subtitle">Curated collection of the best anime moments, AMVs, and edits</p>
+                    
+                    <!-- Get Video Button -->
+                    <button class="get-video-btn" id="getVideoBtn">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Get Video</span>
+                    </button>
+                </div>
+                
+                <div class="hero-illustration">
+                    <div class="anime-character">
+                        <div class="character-head"></div>
+                        <div class="character-body"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Player Section (Hidden Initially) -->
+        <section class="video-section hidden" id="videoSection">
+            <div class="video-container">
+                <!-- Video Player -->
+                <div class="video-player-container">
+                    <div class="video-wrapper">
+                        <iframe class="video-player" id="videoPlayer" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <!-- Video Controls -->
+                    <div class="video-controls">
+                        <button class="control-btn prev-btn" id="prevBtn">
+                            <i class="fas fa-step-backward"></i>
+                            <span>Previous</span>
+                        </button>
+                        
+                        <button class="control-btn download-btn" id="downloadBtn">
+                            <i class="fas fa-download"></i>
+                            <span>Download</span>
+                        </button>
+                        
+                        <button class="control-btn next-btn" id="nextBtn">
+                            <i class="fas fa-step-forward"></i>
+                            <span>Next</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Video Info -->
+                    <div class="video-info">
+                        <h3 class="video-title" id="videoTitle">Loading video...</h3>
+                        <div class="video-meta">
+                            <span class="video-category" id="videoCategory">All Edits</span>
+                            <span class="video-counter" id="videoCounter">1 / 45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Space 2 (Middle) -->
+        <div class="ad-space ad-middle" id="adMiddle">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad"></i>
+                <span>Advertisement Space</span>
+            </div>
+        </div>
+
+        <!-- Best of Ani Vision Message -->
+        <div class="best-message hidden" id="bestMessage">
+            <div class="message-container">
+                <i class="fas fa-trophy"></i>
+                <h3>Best of Ani Vision</h3>
+                <p>Curated picks coming soon! We're working on selecting the absolute best edits for you.</p>
+                <button class="ok-btn" id="okBtn">OK</button>
+            </div>
+        </div>
+
+        <!-- Category Status -->
+        <div class="category-status hidden" id="categoryStatus">
+            <div class="status-content">
+                <i class="fas fa-filter"></i>
+                <span>Viewing: <strong id="currentCategory">All Edits</strong></span>
+                <button class="clear-filter" id="clearFilter">
+                    <i class="fas fa-times"></i> Clear Filter
+                </button>
+            </div>
+        </div>
+
+        <!-- Ad Space 3 (Bottom) -->
+        <div class="ad-space ad-bottom" id="adBottom">
+            <div class="ad-placeholder">
+                <i class="fas fa-ad"></i>
+                <span>Advertisement Space</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Download Popup -->
+    <div class="popup-overlay hidden" id="popupOverlay">
+        <div class="download-popup" id="downloadPopup">
+            <div class="popup-header">
+                <h3>
+                    <i class="fas fa-download"></i>
+                    Select Video Quality
+                </h3>
+                <button class="close-popup" id="closePopup">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="popup-content">
+                <div class="quality-options">
+                    <button class="quality-btn" data-quality="360p">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>360p</span>
+                        <small>Low quality</small>
+                    </button>
+                    
+                    <button class="quality-btn" data-quality="480p">
+                        <i class="fas fa-tablet-alt"></i>
+                        <span>480p</span>
+                        <small>Standard quality</small>
+                    </button>
+                    
+                    <button class="quality-btn" data-quality="720p">
+                        <i class="fas fa-desktop"></i>
+                        <span>720p</span>
+                        <small>HD quality</small>
+                    </button>
+                    
+                    <button class="quality-btn" data-quality="1080p">
+                        <i class="fas fa-tv"></i>
+                        <span>1080p</span>
+                        <small>Full HD</small>
+                    </button>
+                </div>
+                
+                <div class="download-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Download will start automatically after selecting quality</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Ani Vision</h3>
+                <p>Premium Anime Content Platform</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">
+                    <i class="fas fa-shield-alt"></i> Privacy Policy
+                </a>
+                <a href="terms.html" class="footer-link">
+                    <i class="fas fa-file-contract"></i> Terms & Conditions
+                </a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>© 2023 Ani Vision. All rights reserved.</p>
+                <p class="disclaimer">This is a fan-made platform for entertainment purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Backdrop for menu and popup -->
+    <div class="backdrop hidden" id="backdrop"></div>
+
+    <!-- Scripts -->
+    <script src="video.js"></script>
+    <script src="assets/video-player.js"></script>
+    <script src="assets/popup.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
