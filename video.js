@@ -2,11 +2,11 @@
 const videoData = {
     // All videos (45 videos)
     "all": [
-        {id: 1, title: "Anime Action 1", url: "https://drive.google.com/file/d/1-NqVX5qVomEpWILFBDNBR2cq2sjliy1C/preview", category: "all"},
-        {id: 2, title: "AMV Epic Battle", url: "https://drive.google.com/file/d/12AZCkUhNcgYNRwtId75MRKkiFtchfwsw/preview", category: "basic"},
-        {id: 3, title: "Romantic Moments", url: "https://drive.google.com/file/d/15vQxUtZykNRaCSN7R2OYMqS6kPP-Fg6y/preview", category: "basic"},
-        {id: 4, title: "Shonen Compilation", url: "https://drive.google.com/file/d/16QNB2RScSbPShXikA7VUKfiovDcR85_u/preview", category: "basic"},
-        {id: 5, title: "Opening Collection", url: "https://drive.google.com/file/d/17L8KgBgCTKf_GG2VyLh7yo-lKMJYW0jY/preview", category: "basic"},
+        {id: 1, title: "Ani Vision", url: "https://drive.google.com/file/d/1-NqVX5qVomEpWILFBDNBR2cq2sjliy1C/preview", category: "all"},
+        {id: 2, title: "Ani Vision", url: "https://drive.google.com/file/d/12AZCkUhNcgYNRwtId75MRKkiFtchfwsw/preview", category: "basic"},
+        {id: 3, title: "Ani vision", url: "https://drive.google.com/file/d/15vQxUtZykNRaCSN7R2OYMqS6kPP-Fg6y/preview", category: "basic"},
+        {id: 4, title: "Ani vision", url: "https://drive.google.com/file/d/16QNB2RScSbPShXikA7VUKfiovDcR85_u/preview", category: "basic"},
+        {id: 5, title: "Ani vision", url: "https://drive.google.com/file/d/17L8KgBgCTKf_GG2VyLh7yo-lKMJYW0jY/preview", category: "basic"},
         {id: 6, title: "Best Fight Scenes", url: "https://drive.google.com/file/d/17wVuylTnIdLsYLe1w7cL6hWzNpFrdYkj/preview", category: "basic"},
         {id: 7, title: "Sad Moments", url: "https://drive.google.com/file/d/184_EG90XqgRzm9rTZnoRl6afDzWuR8aU/preview", category: "basic"},
         {id: 8, title: "Comedy Clips", url: "https://drive.google.com/file/d/18F1AIrxb1wVX2SLNP5kZx-9DfU5iU9Px/preview", category: "basic"},
